@@ -18,15 +18,22 @@ public class LambdaButtons {
 		window.add(randNumber);
 		window.add(tellAJoke);
 		
+		
 		//1. Call the addActionListener methods for each button. Use lambdas
 		//   to define to functionality of the buttons.
 		
 		window.setVisible(true);
 		window.pack();
 	}
+	public void bl() {
+		addNumbers.addActionListener((e)->System.out.println("ADD 2 Numbers"));
+		randNumber.addActionListener((e)->System.out.println("RANDOM NUMBER"));
+		tellAJoke.addActionListener((e)->System.out.println("TELL A JOKE"));
+	}
 	
 	public static void main(String[] args) {
-		new LambdaButtons();
+		new LambdaButtons().bl();
+	
 	}
 	
 	
